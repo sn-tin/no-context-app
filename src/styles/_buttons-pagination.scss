@@ -1,26 +1,26 @@
-.buttons-paginatiom {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin: 50px 0 30px;
-    .button-group {
-        display: flex;
-        gap: 10px;
-    }
-    button {
-        display: flex;
-        align-items: center;
-        font-size: clamp(0.9rem, 2.5vw, 1.2rem);
-        @include WorkSans(600);
-        padding: 5px 10px;
-        @include Buttons(600, 5px);
-        &:hover {
-            background-color: #FFFF00;
-            @include blackShadow(3px);
-        }
-    }
-}
+// .buttons-paginatiom {
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: space-between;
+//     align-items: center;
+//     margin: 50px 0 30px;
+//     .button-group {
+//         display: flex;
+//         gap: 10px;
+//     }
+//     button {
+//         display: flex;
+//         align-items: center;
+//         font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+//         @include WorkSans(600);
+//         padding: 5px 10px;
+//         @include Buttons(600, 5px);
+//         &:hover {
+//             background-color: #FFFF00;
+//             @include blackShadow(3px);
+//         }
+//     }
+// }
 
 #all-btn, #fave-btn {
     display: flex;
@@ -66,15 +66,15 @@
 }
 
 @media screen and (min-width: 800px) {
-    .buttons-paginatiom {
-        button {
-            padding: 10px;
-            @include Buttons(600, 5px);
-            &:hover {
-                @include blackShadow(5px);
-            }
-        }
-    }
+    // .buttons-paginatiom {
+    //     button {
+    //         padding: 10px;
+    //         @include Buttons(600, 5px);
+    //         &:hover {
+    //             @include blackShadow(5px);
+    //         }
+    //     }
+    // }
     #all-btn, #fave-btn {
         gap: 10px;
     }
