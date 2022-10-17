@@ -19,7 +19,7 @@ const ScrollToTop = () => {
 
     return (
         <div className="scroll-to-top" onClick={scrollToTop}>
-            <NorthRoundedIcon />
+            <NorthRoundedIcon fontSize="large"/>
         </div>
     )
 }

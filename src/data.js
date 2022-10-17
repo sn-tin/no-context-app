@@ -37,8 +37,8 @@ const data = [
 	},
 	{
 		id: 6,
-		plainText: "It’s me and my jowa wah uuwi na sya uuwi na sha wah maghahanap ng iba maghahanap ng ib- /tinakpan bibig/ niyakap (tumugtog ung coz you are the one the only thing) (740)",
-		origText: "It’s me😡🤔🙄and😘🥰🤤my jowa💍🥳😱wah😂😱👩‍❤️‍💋‍👩uuwi na sya🥺🥺😄uuwi na sha😘🥳💘wah😄💍💘maghahanap ng iba💕🤤😊maghahanap ng ib-💓💓 /tinakpan bibig/ niyakap ( tumugtog ung coz you are the one the only thing 🥺💓💓 ) (740)",
+		plainText: "bagi bagi chadolbagi singibanggi bboongbboong banggi",
+		origText: "bagi bagi chadolbagi singibanggi bboongbboong banggi",
 		isFavorite: false,
 	},
 	{

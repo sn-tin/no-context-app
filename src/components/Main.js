@@ -40,6 +40,9 @@ const Hero = () => {
         }
     })
 
+    const handleSubmit = (e) => {
+        e.preventDefault()
+    }
 
 
     console.log(searchText)
@@ -48,7 +51,7 @@ const Hero = () => {
         <section className="hero">
             <h1>no context</h1>
             <p>a collection of no context <span className="highlight">unhinged</span> FIlipino texts.</p>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <input type="text" 
                 placeholder="Search for text here..." 
                 name="search" 
@@ -57,7 +60,7 @@ const Hero = () => {
                 onChange={handleChange} />
                 <button><SearchIcon /></button>
             </form>
-            <CardSorting filter={searchData} handlePageClick={handlePageClick} pageCount={pageCount} />
+            <CardSorting filteredSearch={searchData} handlePageClick={handlePageClick} pageCount={pageCount} />
         </section>
     )
 }

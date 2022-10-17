@@ -13,13 +13,27 @@
         align-items: center;
         font-size: clamp(0.9rem, 2.5vw, 1.2rem);
         @include WorkSans(600);
-        padding: 5px;
+        padding: 5px 10px;
         @include Buttons(600, 5px);
         &:hover {
             background-color: #FFFF00;
             @include blackShadow(3px);
         }
     }
+}
+
+#all-btn, #fave-btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#all-btn::after {
+    content: 'All';
+}
+
+#fave-btn::after {
+    content: 'Favorites';
 }
 
 .pagination {
@@ -62,16 +76,7 @@
         }
     }
     #all-btn, #fave-btn {
-        display: flex;
-        align-items: center;
-    }
-    #all-btn::after {
-        content: 'All';
-        padding-left: 10px;
-    }
-    #fave-btn::after {
-        content: 'Favorites';
-        padding-left: 10px;
+        gap: 10px;
     }
     .active-btn {
         @include blackShadow(5px);

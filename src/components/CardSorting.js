@@ -8,7 +8,7 @@ import Masonry from 'react-masonry-css';
 import data from "../data";
 import Cards from "./Cards";
 
-const CardSorting = ({filter, handlePageClick, pageCount}) => {
+const CardSorting = ({filteredSearch, handlePageClick, pageCount}) => {
     const [content, setContent] = useState(data)
 
     /* When all and favorite button is clicked */
@@ -40,7 +40,7 @@ const CardSorting = ({filter, handlePageClick, pageCount}) => {
                     <button 
                         id="all-btn" className={isAllActive ? "active-btn" : null} name="all"
                     >
-                        <GridViewIcon fontSize="small" />
+                        <GridViewIcon fontSize="small" spacing="10px" />
                     </button>
                     <button id="fave-btn" className={isFaveActive ? "active-btn" : null} name="favorite">
                         <FavoriteTwoToneIcon fontSize="small" />
@@ -68,7 +68,7 @@ const CardSorting = ({filter, handlePageClick, pageCount}) => {
                     className="my-masonry-grid"
                     columnClassName="my-masonry-grid_column"
                 >
-                    {filter.map(item => (
+                    {filteredSearch.map(item => (
                         <Cards key={item.id} id={item.id} text={item.origText} isFavorite={isFavorite} handleFaveClick={handleFaveClick} />
                     ))}
                 </Masonry>
