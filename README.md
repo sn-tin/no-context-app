@@ -1,7 +1,7 @@
 # 👩‍💻 Work In Progress: No Context App (temporary title)
 A website where you can copy &amp; paste no context texts to spam your friends' messages or comments section and just have fun together.
 
-## Table of contents
+## 📖 Table of contents 
 
 - [Overview](#overview)
   - [Features](#features)
@@ -11,9 +11,9 @@ A website where you can copy &amp; paste no context texts to spam your friends' 
   - [Running the App Locally](#running-the-app-locally)
 - [Author](#author)
 
-## Overview
+## 🔍 Overview
 
-### Features
+### Features 📂
 
 Users should be able to:
 - View the optimal layout for the site depending on their device's screen size
@@ -23,18 +23,18 @@ Users should be able to:
 - View all cards by selecting a page
 - Automatically scroll to top by clicking the designated 'scroll to top' button
 
-### Screenshot 
+### Screenshot 📸
 
-Expected final UI
+Expected final output:
 
-![No Context App]()
+![No Context App](src/assets/no-context.png)
 
-### Links
+### Links 🔗
 
 - Solution URL: TBA
 - Live Site URL: TBA
 
-### Built with
+### Built with 🔨
 
 - HTML5
 - Sass (CSS pre-processor)
@@ -42,15 +42,16 @@ Expected final UI
 - Mobile-first workflow
 - ReactJS
 - MaterialUI
+- [npmjs](https://www.npmjs.com/)
 - [Goole Fonts](https://fonts.google.com/knowledge)
 
-### Running the App Locally
+### Running the App Locally 💻
 This app runs on Node.js. If Node.js is installed, you may clone the repository and install its dependencies running:
 ```
 npm install
 ```
 
-## Author
+## 👩‍💻 Author
 
 - Frontend Mentor - [@sn-tin](https://www.frontendmentor.io/profile/sn-tin)
 - Github - [@sn-tin](https://github.com/sn-tin/)
