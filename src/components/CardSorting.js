@@ -8,10 +8,9 @@ import Masonry from 'react-masonry-css';
 import data from "../data";
 import Cards from "./Cards";
 
-const CardSorting = () => {
+const CardSorting = ({filter, handlePageClick, pageCount}) => {
     const [content, setContent] = useState(data)
 
-    const itemsPerPage = 10;
     /* When all and favorite button is clicked */
     const [isAllActive, setAllIsActive] = useState(false);
     const [isFaveActive, setFaveIsActive] = useState(false);
@@ -19,25 +18,6 @@ const CardSorting = () => {
     const [isFavorite, setIsFavorite] = useState(data)
 
     console.log(isFavorite)
-
-    const [currentItems, setCurrentItems] = useState([]);
-    const [pageCount, setPageCount] = useState(0);
-    const [itemOffset, setItemOffset] = useState(0);
-
-    useEffect(() => {
-        const endOffset = itemOffset + itemsPerPage;
-        console.log(`Loading items from ${itemOffset} to ${endOffset}`);
-        setCurrentItems(content.slice(itemOffset, endOffset));
-        setPageCount(Math.ceil(content.length / itemsPerPage));
-      }, [itemOffset, itemsPerPage]);
-
-    const handlePageClick = (event) => {
-        const newOffset = (event.selected * itemsPerPage) % content.length;
-        console.log(
-        `User requested page number ${event.selected}, which is offset ${newOffset}`
-        );
-        setItemOffset(newOffset);
-    };
 
     const handleFaveClick = () => {
         setIsFavorite(
@@ -67,7 +47,7 @@ const CardSorting = () => {
                     </button>
                 </div>
                 <div className="pagination">
-                <ReactPaginate
+                {/* <ReactPaginate
                     breakLabel="..."
                     nextLabel={<ArrowForwardIcon fontSize="small" />}
                     onPageChange={handlePageClick}
@@ -80,7 +60,7 @@ const CardSorting = () => {
                     nextLinkClassName="page-num next"
                     activeLinkClassName="active"
 
-                />
+                /> */}
                 </div>
             </div>
             <div className="card-masonry">
@@ -88,7 +68,7 @@ const CardSorting = () => {
                     className="my-masonry-grid"
                     columnClassName="my-masonry-grid_column"
                 >
-                    {currentItems.map(item => (
+                    {filter.map(item => (
                         <Cards key={item.id} id={item.id} text={item.origText} isFavorite={isFavorite} handleFaveClick={handleFaveClick} />
                     ))}
                 </Masonry>

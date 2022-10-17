@@ -1,11 +1,26 @@
 .request-form {
-    position: absolute;
-    z-index: 1;
-    background-color: #FFFFFF;
-    border: 3px solid #000000;
-    border-radius: 10px;
-    padding: 40px 20px;
-    box-shadow: 0 0 0 100vmax rgb(0 0 0 / 50%), 0 0 2rem rgb(0 0 0 / 50%);
+    .overlay {
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        position: fixed;
+        background: rgba(49,49,49,0.8);
+    }
+    .form-content {
+        width: 330px;
+        background-color: #FFFFFF;
+        border: 3px solid #000000;
+        border-radius: 10px;
+        padding: 40px 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+    }
     h1 {
         font-size: clamp(2rem, 2.5vw, 2.3rem);
         @include Montserrat(600);
@@ -45,13 +60,15 @@
 
 @media screen and (min-width: 800px) {
     .request-form {
-        width: 400px;
-        padding: 50px 40px;
         .close-btn {
             position: absolute;
             right: 40px;
             top: 50px;
             cursor: pointer;
+        }
+        .form-content {
+            width: 400px;
+            padding: 50px 40px;
         }
     }
 }

@@ -22,7 +22,7 @@ const Cards = ({isFavorite, handleFaveClick, text}) => {
                 <FavoriteTwoToneIcon color={color} onClick={handleFaveClick} />
                 
             </div>
-            {/* <textarea className="card-text" readOnly="readonly" value={props.data.origText}>
+            {/* <textarea className="card-text" readOnly="readonly" value={text} >
             </textarea> */}
             <p>{text}</p>
             <button className="copy-btn" style={styles} onClick={copyToClipboard}>

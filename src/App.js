@@ -1,6 +1,6 @@
 import ScrollToTop from './components/ScrollToTop';
 import CardSorting from "./components/CardSorting";
-import Hero from "./components/Hero";
+import Main from "./components/Main";
 import Navbar from "./components/Navbar";
 import { useState, useEffect } from 'react';
 import RequestForm from './components/RequestForm';
@@ -19,7 +19,7 @@ const App = () => {
   const [form, setForm] = useState(false)
 
   const displayRequestForm = () => {
-    setForm(true)
+    setForm(!form)
   }
 
   const closeForm = () => {
@@ -30,8 +30,8 @@ const App = () => {
     <main className="App">
       <Navbar formDisplay={displayRequestForm} />
       {form ? <RequestForm closeForm={closeForm} /> : null}
-      <Hero />
-      <CardSorting />
+      <Main />
+      {/* <CardSorting /> */}
      {isScrolling && <ScrollToTop />}
     </main>
   );
