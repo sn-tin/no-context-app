@@ -1,0 +1,84 @@
+.buttons-paginatiom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 0 30px;
+    .button-group {
+        display: flex;
+        gap: 10px;
+    }
+    button {
+        display: flex;
+        align-items: center;
+        font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+        @include WorkSans(600);
+        padding: 5px;
+        @include Buttons(600, 5px);
+        &:hover {
+            background-color: #FFFF00;
+            @include blackShadow(3px);
+        }
+    }
+}
+
+.pagination {
+    ul {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        list-style-type: none;
+    }
+    .page-num {
+        font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+        // line-height: 1.5;
+        @include WorkSans(400);
+        cursor: pointer;
+    }
+    .page-num.active {
+        background-color: #FFFF00;
+        border: 2px solid #000000;
+        border-radius: 5px;
+        padding: 5px 10px;
+        @include WorkSans(700);
+        transition: background-color 0.3s ease-in;
+    }
+}
+
+.active-btn {
+    background-color: #FFFF00 !important;
+    margin-right: 8px;
+    @include blackShadow(3px);
+}
+
+@media screen and (min-width: 800px) {
+    .buttons-paginatiom {
+        button {
+            padding: 10px;
+            @include Buttons(600, 5px);
+            &:hover {
+                @include blackShadow(5px);
+            }
+        }
+    }
+    #all-btn, #fave-btn {
+        display: flex;
+        align-items: center;
+    }
+    #all-btn::after {
+        content: 'All';
+        padding-left: 10px;
+    }
+    #fave-btn::after {
+        content: 'Favorites';
+        padding-left: 10px;
+    }
+    .active-btn {
+        @include blackShadow(5px);
+    }
+    .pagination {
+        ul {
+            gap: 15px;
+        }
+    }
+}

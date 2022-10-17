@@ -1,24 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import ScrollToTop from './components/ScrollToTop';
+import CardSorting from "./components/CardSorting";
+import Hero from "./components/Hero";
+import Navbar from "./components/Navbar";
+import { useState, useEffect } from 'react';
+import RequestForm from './components/RequestForm';
 
-function App() {
+const App = () => {
+  const [isScrolling, setIsScrolling] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", () =>
+        setIsScrolling(true)
+      );
+    }
+  }, []);
+
+  const [form, setForm] = useState(false)
+
+  const displayRequestForm = () => {
+    setForm(true)
+  }
+
+  const closeForm = () => {
+    setForm(false)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className="App">
+      <Navbar formDisplay={displayRequestForm} />
+      {form ? <RequestForm closeForm={closeForm} /> : null}
+      <Hero />
+      <CardSorting />
+     {isScrolling && <ScrollToTop />}
+    </main>
   );
 }
 

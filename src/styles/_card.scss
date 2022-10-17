@@ -1,0 +1,54 @@
+.card {
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    border: 2px solid #000000;
+    padding: 30px;
+    margin-bottom: 25px;
+    &:hover {
+        @include blackShadow(5px);
+    }
+}
+
+.card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.card-text {
+    resize: none;
+}
+
+.copy-btn {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    @include blackShadow(5px);
+    @include Buttons(800, 3px);
+}
+
+.my-masonry-grid {
+    display: -webkit-box; /* Not needed if autoprefixing */
+    display: -ms-flexbox; /* Not needed if autoprefixing */
+    display: flex;
+    margin-left: -30px; /* gutter size offset */
+    width: auto;
+  }
+  
+  .my-masonry-grid_column {
+    padding-left: 30px; /* gutter size */
+    background-clip: padding-box;
+  }
+
+@media screen and (min-width: 800px) {
+    .card {
+        &:hover {
+            @include blackShadow(8px);
+            @include HoverAnimate(1.01);
+        }
+    }
+    .copy-btn {
+        @include blackShadow(8px);
+    }
+}

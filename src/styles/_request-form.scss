@@ -1,0 +1,57 @@
+.request-form {
+    position: absolute;
+    z-index: 1;
+    background-color: #FFFFFF;
+    border: 3px solid #000000;
+    border-radius: 10px;
+    padding: 40px 20px;
+    box-shadow: 0 0 0 100vmax rgb(0 0 0 / 50%), 0 0 2rem rgb(0 0 0 / 50%);
+    h1 {
+        font-size: clamp(2rem, 2.5vw, 2.3rem);
+        @include Montserrat(600);
+        margin-bottom: 10px;
+    }
+    p {
+        font-size: clamp(1rem, 2.5vw, 1.1rem);
+    }
+    .close-btn {
+        position: absolute;
+        right: 20px;
+        top: 40px;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        margin-top: 15px;
+        label {
+            font-size: clamp(1.1rem, 2.5vw, 1.15rem);
+            @include WorkSans(600);
+        }
+        input, textarea {
+            @include WorkSans(400);
+            padding: 8px;
+            margin: 5px 0 10px;
+            resize: none;
+        }
+        button {
+            @include Buttons(700, 5px);
+            @include blackShadow(5px);
+            background-color: #FFF000;
+            padding: 10px;
+            margin-top: 10px;
+        }
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .request-form {
+        width: 400px;
+        padding: 50px 40px;
+        .close-btn {
+            position: absolute;
+            right: 40px;
+            top: 50px;
+            cursor: pointer;
+        }
+    }
+}

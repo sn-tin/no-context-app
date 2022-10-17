@@ -1,0 +1,37 @@
+@import './variables';
+
+.nav-links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+    @include WorkSans(600);
+    cursor: pointer;
+    p:hover {
+        color: #5e5e5e;
+    }
+}
+
+.request-btn {
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+    padding: 10px;
+    @include Buttons(0, 0);
+    background-color: #FFFF00;
+    @include WorkSans(600);
+    @include blackShadow(3px);
+    border-radius: 5px;
+}
+
+@media screen and (min-width: 900px) {
+    .nav-links {
+        gap: 30px;
+    }
+    .request-btn {
+        padding: 10px 25px;
+        &:hover {
+            @include blackShadow(5px);
+            @include HoverAnimate(1.1);
+        }
+    }
+}

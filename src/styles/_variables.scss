@@ -1,0 +1,34 @@
+/* Variables */
+$boldFont: 'Montserrat', sans-serif;
+$bodyFont: 'Work Sans', sans-serif;
+
+@mixin blackShadow($n) {
+    -webkit-box-shadow: $n $n 0px #000000;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow:    $n $n 0px #000000;  /* Firefox 3.5 - 3.6 */
+    box-shadow: $n $n 0px #000000;
+}
+
+@mixin Montserrat($weight) {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: $weight;
+    font-style: normal;
+}
+
+@mixin WorkSans($weight: 400) {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: $weight;
+    font-style: normal;
+}
+
+@mixin Buttons($weight, $radius) {
+    @include Montserrat($weight);
+    background-color: #FFFFFF;
+    border: 2px solid #000000;
+    border-radius: $radius;
+    cursor: pointer;
+}
+
+@mixin HoverAnimate($scale) {
+    transform: scale($scale);
+    transition: all 0.2s ease-in-out;
+}

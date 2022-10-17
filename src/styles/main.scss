@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&family=Work+Sans:wght@400;600;700&display=swap');
+@import './navbar';
+@import './hero';
+@import './buttons-pagination';
+@import './card';
+@import './scroll-to-top';
+@import './request-form';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+    background-image: url("../assets/grid-background.svg");
+    background-size: 80rem;
+    background-position: top center;
+    background-color: #FEFCF8;
+    background-repeat: no-repeat;
+}
+
+.App {
+    margin: 50px 20px;
+    position: relative;
+}
+
+@media screen and (min-width: 750px) {
+    body {
+        background-size: 100%;
+    }
+    .App {
+        margin: 80px auto;
+        padding: 0 40px;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .App {
+        width: 100rem;
+        margin: 50px auto;
+        padding: 0;
+    }
+}
