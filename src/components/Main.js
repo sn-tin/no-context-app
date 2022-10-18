@@ -44,9 +44,6 @@ const Hero = () => {
         e.preventDefault()
     }
 
-
-    console.log(searchText)
-
     return (
         <section className="hero">
             <h1>no context</h1>

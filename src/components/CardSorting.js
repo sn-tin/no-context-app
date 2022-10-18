@@ -23,15 +23,6 @@ const CardSorting = ({filteredSearch}) => {
         console.log("Favorite button is active")
     }
 
-    /* When heart icon is clicked */
-    const [isFavorite, setIsFavorite] = useState(data)
-
-    const handleFaveClick = (e) => {
-        setIsFavorite(
-            console.log("Favorite!", e.target.id)
-        )
-    }
-
     /* Breakpoints for Masonry Layout */
     const breakpoints = {
         default: 4,
@@ -71,12 +62,12 @@ const CardSorting = ({filteredSearch}) => {
                 >
                     {
                     isAllActive && filteredSearch.map(item => (
-                        <Cards key={item.id} id={item.id} text={item.origText} isFavorite={isFavorite} handleFaveClick={handleFaveClick} />
+                        <Cards key={item.id} id={item.id} text={item.origText} isFavorite={item.isFavorite} />
                     ))}
                     {
                     isFaveActive && 
                     filteredSearch.filter(item => item.isFavorite === true).map(filtered => (
-                    <Cards key={filtered.id} id={filtered.id} text={filtered.origText} isFavorite={isFavorite} handleFaveClick={handleFaveClick} />)) 
+                    <Cards key={filtered.id} id={filtered.id} text={filtered.origText} data={filtered} />)) 
                     }           
                 </Masonry>
             </div>

@@ -3,7 +3,7 @@ import FormatQuoteIcon from '@mui/icons-material/FormatQuote';
 import FavoriteTwoToneIcon from '@mui/icons-material/FavoriteTwoTone';
 
 
-const Cards = ({isFavorite, handleFaveClick, text, id}) => {
+const Cards = ({data, text, id}) => {
     const [isCopied, setIsCopied] = useState(false)
     const copyToClipboard = (e) => {
         setIsCopied(true)
@@ -13,13 +13,20 @@ const Cards = ({isFavorite, handleFaveClick, text, id}) => {
         transition: "background-color 0.1s ease-in"
     }
 
-    const color = isFavorite ? "#FFFF00" : "#FFFFFF"
+    /* When heart icon is clicked */
+    const [favorite, setFavorite] = useState("Favorite!")
+
+    const handleFaveClick = (e) => {
+        console.log(favorite)
+    }
+    
+    // const color = isFavorite ? "#FFFF00" : "#FFFFFF"
 
     return (
         <div className="card">
             <div className="card-top">
                 <FormatQuoteIcon />
-                <FavoriteTwoToneIcon color={color} onClick={handleFaveClick} />
+                <FavoriteTwoToneIcon onClick={handleFaveClick} />
                 
             </div>
             {/* <textarea className="card-text" readOnly="readonly" value={text} >
