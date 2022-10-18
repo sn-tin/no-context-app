@@ -1,27 +1,34 @@
 import React, { useState, useEffect } from "react";
-import ReactPaginate from 'react-paginate';
 import GridViewIcon from '@mui/icons-material/GridView';
 import FavoriteTwoToneIcon from '@mui/icons-material/FavoriteTwoTone';
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import Masonry from 'react-masonry-css';
 import data from "../data";
 import Cards from "./Cards";
 
-const CardSorting = ({filteredSearch, handlePageClick, pageCount}) => {
-    const [content, setContent] = useState(data)
+const CardSorting = ({filteredSearch}) => {
 
     /* When all and favorite button is clicked */
-    const [isAllActive, setAllIsActive] = useState(false);
+    const [isAllActive, setAllIsActive] = useState(true);
     const [isFaveActive, setFaveIsActive] = useState(false);
+
+    const handleAllButton = () => {
+        setAllIsActive(true)
+        setFaveIsActive(false)
+        console.log("All button is active")
+    }
+
+    const handleFaveButton = () => {
+        setFaveIsActive(true)
+        setAllIsActive(false)
+        console.log("Favorite button is active")
+    }
+
     /* When heart icon is clicked */
     const [isFavorite, setIsFavorite] = useState(data)
 
-    console.log(isFavorite)
-
-    const handleFaveClick = () => {
+    const handleFaveClick = (e) => {
         setIsFavorite(
-            console.log("Favorite!")
+            console.log("Favorite!", e.target.id)
         )
     }
 
@@ -38,29 +45,23 @@ const CardSorting = ({filteredSearch, handlePageClick, pageCount}) => {
             <div className="buttons-paginatiom">
                 <div className="button-group">
                     <button 
-                        id="all-btn" className={isAllActive ? "active-btn" : null} name="all"
+                        id="all-btn" 
+                        className={isAllActive ? "active-btn" : null} 
+                        name="all" 
+                        onClick={handleAllButton}
                     >
                         <GridViewIcon fontSize="small" spacing="10px" />
                     </button>
-                    <button id="fave-btn" className={isFaveActive ? "active-btn" : null} name="favorite">
+                    <button 
+                        id="fave-btn" 
+                        className={isFaveActive ? "active-btn" : null} 
+                        name="favorite"
+                        onClick={handleFaveButton}
+                    >
                         <FavoriteTwoToneIcon fontSize="small" />
                     </button>
                 </div>
                 <div className="pagination">
-                {/* <ReactPaginate
-                    breakLabel="..."
-                    nextLabel={<ArrowForwardIcon fontSize="small" />}
-                    onPageChange={handlePageClick}
-                    pageRangeDisplayed={5}
-                    pageCount={pageCount}
-                    previousLabel={<ArrowBackIcon fontSize="small" />}
-                    renderOnZeroPageCount={null}
-                    pageLinkClassName="page-num"
-                    previousLinkClassName="page-num previous"
-                    nextLinkClassName="page-num next"
-                    activeLinkClassName="active"
-
-                /> */}
                 </div>
             </div>
             <div className="card-masonry">
@@ -68,9 +69,15 @@ const CardSorting = ({filteredSearch, handlePageClick, pageCount}) => {
                     className="my-masonry-grid"
                     columnClassName="my-masonry-grid_column"
                 >
-                    {filteredSearch.map(item => (
+                    {
+                    isAllActive && filteredSearch.map(item => (
                         <Cards key={item.id} id={item.id} text={item.origText} isFavorite={isFavorite} handleFaveClick={handleFaveClick} />
                     ))}
+                    {
+                    isFaveActive && 
+                    filteredSearch.filter(item => item.isFavorite === true).map(filtered => (
+                    <Cards key={filtered.id} id={filtered.id} text={filtered.origText} isFavorite={isFavorite} handleFaveClick={handleFaveClick} />)) 
+                    }           
                 </Masonry>
             </div>
         </section>

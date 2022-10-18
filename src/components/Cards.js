@@ -3,7 +3,7 @@ import FormatQuoteIcon from '@mui/icons-material/FormatQuote';
 import FavoriteTwoToneIcon from '@mui/icons-material/FavoriteTwoTone';
 
 
-const Cards = ({isFavorite, handleFaveClick, text}) => {
+const Cards = ({isFavorite, handleFaveClick, text, id}) => {
     const [isCopied, setIsCopied] = useState(false)
     const copyToClipboard = (e) => {
         setIsCopied(true)

@@ -39,13 +39,14 @@
         flex-direction: column;
         margin-top: 15px;
         label {
-            font-size: clamp(1.1rem, 2.5vw, 1.15rem);
+            font-size: clamp(0.9rem, 2.5vw, 1.1rem);
             @include WorkSans(600);
         }
         input, textarea {
             @include WorkSans(400);
-            padding: 8px;
+            padding: 10px;
             margin: 5px 0 10px;
+            border-radius: 5px;
             resize: none;
         }
         button {

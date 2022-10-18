@@ -9,7 +9,7 @@ const data = [
 		id: 1,
 		plainText: "Beh, ano yung nalalaman kong tinatarayan mo kami beh? Famous ka? Tapang ka ah, kakasa ka ba? Ano beh palag square bati lang, ano beh? Beh, hoy bakit ka natatakot e ikaw ang nauna, pumalag ka kingina mo ouch aray ha /sinabunutan; kingina! Aray ah puta chemsi yung bato! /Pinukpok; oha kingina mo ka ah sakit aray beh, beh tulong Beh, ano yung nalalaman kong tinatarayan mo kami beh? Famous ka? Tapang ka ah, kakasa ka ba? Ano beh palag square bati lang, ano beh? Beh, hoy bakit ka natatakot e ikaw ang nauna, pumalag ka kingina mo ouch aray ha /sinabunutan; kingina! Aray ah puta chemsi yung bato! /Pinukpok; oha kingina mo ka ah sakit aray beh, beh tulong Beh, ano yung nalalaman kong tinatarayan mo kami beh? Famous ka? Tapang ka ah, kakasa ka ba? Ano beh palag square bati lang, ano beh? Beh, hoy bakit ka natatakot e ikaw ang nauna, pumalag ka kingina mo ouch aray ha /sinabunutan; kingina! Aray ah puta chemsi yung bato! /Pinukpok; oha kingina mo ka ah sakit aray beh, beh tulong.",
 		origText: "Beh, ano yung nalalaman kong tinatarayan mo kami beh? Famous ka? Tapang ka ah, kakasa ka ba? Ano beh palag square bati lang, ano beh? Beh, hoy bakit ka natatakot e ikaw ang nauna, pumalag ka kingina mo ouch aray ha /sinabunutan; kingina! Aray ah puta chemsi yung bato! /Pinukpok; oha kingina mo ka ah sakit aray beh, beh tulong Beh, ano yung nalalaman kong tinatarayan mo kami beh? Famous ka? Tapang ka ah, kakasa ka ba? Ano beh palag square bati lang, ano beh? Beh, hoy bakit ka natatakot e ikaw ang nauna, pumalag ka kingina mo ouch aray ha /sinabunutan; kingina! Aray ah puta chemsi yung bato! /Pinukpok; oha kingina mo ka ah sakit aray beh, beh tulong Beh, ano yung nalalaman kong tinatarayan mo kami beh? Famous ka? Tapang ka ah, kakasa ka ba? Ano beh palag square bati lang, ano beh? Beh, hoy bakit ka natatakot e ikaw ang nauna, pumalag ka kingina mo ouch aray ha /sinabunutan; kingina! Aray ah puta chemsi yung bato! /Pinukpok; oha kingina mo ka ah sakit aray beh, beh tulong.",
-		isFavorite: false,
+		isFavorite: true,
 	},
 	{
 		id: 2,
@@ -27,7 +27,7 @@ const data = [
 		id: 4,
 		plainText: "aljana eochapi swiun ireun eopjimanseodo nan nega isseoseo modu da gwaenchana sarangeun naege dareun ge anigo sajin sok uriui useumi daya",
 		origText: "aljana eochapi swiun ireun eopjimanseodo nan nega isseoseo modu da gwaenchana sarangeun naege dareun ge anigo sajin sok uriui useumi daya",
-		isFavorite: false,
+		isFavorite: true,
 	},
 	{
 		id: 5,

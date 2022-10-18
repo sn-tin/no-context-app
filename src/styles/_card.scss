@@ -1,3 +1,48 @@
+.buttons-paginatiom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 0 30px;
+    .button-group {
+        display: flex;
+        gap: 10px;
+    }
+    button {
+        display: flex;
+        align-items: center;
+        font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+        @include WorkSans(600);
+        padding: 5px 10px;
+        @include Buttons(600, 5px);
+        &:hover {
+            background-color: #FFFF00;
+            @include blackShadow(3px);
+        }
+    }
+}
+
+#all-btn, #fave-btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#all-btn::after {
+    content: 'All';
+}
+
+#fave-btn::after {
+    content: 'Favorites';
+}
+
+.active-btn {
+    background-color: #FFFF00 !important;
+    margin-right: 8px;
+    @include blackShadow(3px);
+}
+
+
 .card {
     background-color: #FFFFFF;
     border-radius: 5px;
@@ -41,7 +86,7 @@
 .copy-btn {
     width: 100%;
     padding: 10px;
-    margin-top: 20px;
+    margin-top: 15px;
     @include blackShadow(5px);
     @include Buttons(800, 3px);
 }
@@ -60,6 +105,21 @@
   }
 
 @media screen and (min-width: 800px) {
+    .buttons-paginatiom {
+        button {
+            padding: 10px;
+            @include Buttons(600, 5px);
+            &:hover {
+                @include blackShadow(5px);
+            }
+        }
+    }
+    #all-btn, #fave-btn {
+        gap: 10px;
+    }
+    .active-btn {
+        @include blackShadow(5px);
+    }
     .card {
         &:hover {
             @include blackShadow(8px);
