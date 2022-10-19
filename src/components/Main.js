@@ -36,7 +36,7 @@ const Hero = () => {
                 onChange={handleChange} />
                 <button><SearchIcon /></button>
             </form>
-            <CardSorting filteredSearch={searchData} />
+            <CardSorting data={data} filteredSearch={searchData} />
         </section>
     )
 }

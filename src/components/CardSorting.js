@@ -2,10 +2,9 @@ import React, { useState, useEffect } from "react";
 import GridViewIcon from '@mui/icons-material/GridView';
 import FavoriteOutlinedIcon from '@mui/icons-material/FavoriteOutlined';
 import Masonry from 'react-masonry-css';
-import data from "../data";
 import Cards from "./Cards";
 
-const CardSorting = ({filteredSearch}) => {
+const CardSorting = ({data, filteredSearch}) => {
 
     /* When all and favorite button is clicked */
     const [isAllActive, setAllIsActive] = useState(true);
@@ -14,14 +13,25 @@ const CardSorting = ({filteredSearch}) => {
     const handleAllButton = () => {
         setAllIsActive(true)
         setFaveIsActive(false)
-        console.log("All button is active")
     }
 
     const handleFaveButton = () => {
         setFaveIsActive(true)
         setAllIsActive(false)
-        console.log("Favorite button is active")
     }
+
+        /* When favorite (heart icon) is clicked */
+        const [dataSource, setDataSource] = useState(data);
+
+        const onFavorite = (cardId) => {
+            const newDataSource = [...dataSource];
+            const foundCardData = newDataSource.find(card => card.id === cardId);
+            if(!foundCardData) {
+                return;
+            }
+            foundCardData.isFavorite = !foundCardData.isFavorite;
+            setDataSource(newDataSource)
+        }   
 
     /* Breakpoints for Masonry Layout */
     const breakpoints = {
@@ -62,12 +72,12 @@ const CardSorting = ({filteredSearch}) => {
                 >
                     {
                     isAllActive && filteredSearch.map(item => (
-                        <Cards key={item.id} id={item.id} text={item.origText} isFavorite={item.isFavorite} />
+                        <Cards key={item.id} cardId={item.id} text={item.origText} isFavorite={item.isFavorite} onFavorite={() => onFavorite(item.id)} />
                     ))}
                     {
                     isFaveActive && 
                     filteredSearch.filter(item => item.isFavorite === true).map(filtered => (
-                    <Cards key={filtered.id} id={filtered.id} text={filtered.origText} isFavorite={filtered.isFavorite} />)) 
+                    <Cards key={filtered.id} cardId={filtered.id} text={filtered.origText} isFavorite={filtered.isFavorite} onFavorite={() => onFavorite(filtered.id)} />)) 
                     }           
                 </Masonry>
             </div>
