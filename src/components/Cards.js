@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import FormatQuoteIcon from '@mui/icons-material/FormatQuote';
-import FavoriteTwoToneIcon from '@mui/icons-material/FavoriteTwoTone';
+import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
+import FavoriteOutlinedIcon from '@mui/icons-material/FavoriteOutlined';
 
 
-const Cards = ({data, text, id}) => {
+const Cards = ({isFavorite, text, id}) => {
     const [isCopied, setIsCopied] = useState(false)
     const copyToClipboard = (e) => {
         setIsCopied(true)
@@ -26,7 +27,7 @@ const Cards = ({data, text, id}) => {
         <div className="card">
             <div className="card-top">
                 <FormatQuoteIcon />
-                <FavoriteTwoToneIcon onClick={handleFaveClick} />
+                { isFavorite ? <FavoriteOutlinedIcon color="yellow" /> : <FavoriteBorderOutlinedIcon onClick={handleFaveClick} /> }
                 
             </div>
             {/* <textarea className="card-text" readOnly="readonly" value={text} >

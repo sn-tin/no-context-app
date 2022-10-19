@@ -4,27 +4,6 @@ import data from "../data";
 import CardSorting from "./CardSorting";
 
 const Hero = () => {
-    /* Pagination */
-    const itemsPerPage = 10;
-    const [content, setContent] = useState(data)
-    const [currentItems, setCurrentItems] = useState([]);
-    const [pageCount, setPageCount] = useState(0);
-    const [itemOffset, setItemOffset] = useState(0);
-
-    useEffect(() => {
-        const endOffset = itemOffset + itemsPerPage;
-        console.log(`Loading items from ${itemOffset} to ${endOffset}`);
-        setCurrentItems(content.slice(itemOffset, endOffset));
-        setPageCount(Math.ceil(content.length / itemsPerPage));
-      }, [itemOffset, itemsPerPage]);
-
-    const handlePageClick = (event) => {
-        const newOffset = (event.selected * itemsPerPage) % content.length;
-        console.log(
-        `User requested page number ${event.selected}, which is offset ${newOffset}`
-        );
-        setItemOffset(newOffset);
-    };
 
     const [searchText, setSearchText] = useState("");
 
@@ -57,7 +36,7 @@ const Hero = () => {
                 onChange={handleChange} />
                 <button><SearchIcon /></button>
             </form>
-            <CardSorting filteredSearch={searchData} handlePageClick={handlePageClick} pageCount={pageCount} />
+            <CardSorting filteredSearch={searchData} />
         </section>
     )
 }

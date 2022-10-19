@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import GridViewIcon from '@mui/icons-material/GridView';
-import FavoriteTwoToneIcon from '@mui/icons-material/FavoriteTwoTone';
+import FavoriteOutlinedIcon from '@mui/icons-material/FavoriteOutlined';
 import Masonry from 'react-masonry-css';
 import data from "../data";
 import Cards from "./Cards";
@@ -49,7 +49,7 @@ const CardSorting = ({filteredSearch}) => {
                         name="favorite"
                         onClick={handleFaveButton}
                     >
-                        <FavoriteTwoToneIcon fontSize="small" />
+                        <FavoriteOutlinedIcon fontSize="small" />
                     </button>
                 </div>
                 <div className="pagination">
@@ -67,7 +67,7 @@ const CardSorting = ({filteredSearch}) => {
                     {
                     isFaveActive && 
                     filteredSearch.filter(item => item.isFavorite === true).map(filtered => (
-                    <Cards key={filtered.id} id={filtered.id} text={filtered.origText} data={filtered} />)) 
+                    <Cards key={filtered.id} id={filtered.id} text={filtered.origText} isFavorite={filtered.isFavorite} />)) 
                     }           
                 </Masonry>
             </div>
