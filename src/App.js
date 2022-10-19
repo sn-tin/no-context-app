@@ -1,5 +1,4 @@
 import ScrollToTop from './components/ScrollToTop';
-import CardSorting from "./components/CardSorting";
 import Main from "./components/Main";
 import Navbar from "./components/Navbar";
 import { useState, useEffect } from 'react';
@@ -31,7 +30,6 @@ const App = () => {
       <Navbar formDisplay={displayRequestForm} />
       {form ? <RequestForm closeForm={closeForm} /> : null}
       <Main />
-      {/* <CardSorting /> */}
      {isScrolling && <ScrollToTop />}
     </main>
   );

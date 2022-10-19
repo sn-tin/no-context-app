@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import GridViewIcon from '@mui/icons-material/GridView';
 import FavoriteOutlinedIcon from '@mui/icons-material/FavoriteOutlined';
 import Masonry from 'react-masonry-css';
@@ -20,18 +20,18 @@ const CardSorting = ({data, filteredSearch}) => {
         setAllIsActive(false)
     }
 
-        /* When favorite (heart icon) is clicked */
-        const [dataSource, setDataSource] = useState(data);
+    /* When favorite (heart icon) is clicked */
+    const [dataSource, setDataSource] = useState(data);
 
-        const onFavorite = (cardId) => {
-            const newDataSource = [...dataSource];
-            const foundCardData = newDataSource.find(card => card.id === cardId);
-            if(!foundCardData) {
-                return;
-            }
-            foundCardData.isFavorite = !foundCardData.isFavorite;
-            setDataSource(newDataSource)
-        }   
+    const onFavorite = (cardId) => {
+        const newDataSource = [...dataSource];
+        const foundCardData = newDataSource.find(card => card.id === cardId);
+        if(!foundCardData) {
+            return;
+        }
+        foundCardData.isFavorite = !foundCardData.isFavorite;
+        setDataSource(newDataSource)
+    }   
 
     /* Breakpoints for Masonry Layout */
     const breakpoints = {

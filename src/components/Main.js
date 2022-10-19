@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import SearchIcon from '@mui/icons-material/Search';
 import data from "../data";
 import CardSorting from "./CardSorting";
 
-const Hero = () => {
+const Main = () => {
 
     const [searchText, setSearchText] = useState("");
 
@@ -41,4 +41,4 @@ const Hero = () => {
     )
 }
 
-export default Hero;
+export default Main;
