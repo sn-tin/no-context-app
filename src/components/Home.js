@@ -3,7 +3,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import data from "../data";
 import CardSorting from "./CardSorting";
 
-const Main = () => {
+const Home = () => {
 
     const [searchText, setSearchText] = useState("");
 
@@ -41,4 +41,4 @@ const Main = () => {
     )
 }
 
-export default Main;
+export default Home;

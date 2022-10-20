@@ -53,10 +53,7 @@
 }
 
 .highlight {
-    background: linear-gradient(120deg, #FFFF00 0%, #FFFF00 100%);
-    background-repeat: no-repeat;
-    background-size: 100% 40%;
-    background-position: 0 90%;
+    @include Highlight;
 }
 
 @media screen and (min-width: 800px) {

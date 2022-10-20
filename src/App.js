@@ -1,8 +1,9 @@
 import ScrollToTop from './components/ScrollToTop';
-import Main from "./components/Main";
+import Home from "./components/Home";
 import Navbar from "./components/Navbar";
 import { useState, useEffect } from 'react';
 import RequestForm from './components/RequestForm';
+import About from './components/About';
 
 const App = () => {
   const [isScrolling, setIsScrolling] = useState(false);
@@ -28,9 +29,10 @@ const App = () => {
   return (
     <main className="App">
       <Navbar formDisplay={displayRequestForm} />
-      {form ? <RequestForm closeForm={closeForm} /> : null}
-      <Main />
-     {isScrolling && <ScrollToTop />}
+      {/* {form ? <RequestForm closeForm={closeForm} /> : null}
+      <Home />
+     {isScrolling && <ScrollToTop />} */}
+     <About />
     </main>
   );
 }

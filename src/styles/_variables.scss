@@ -8,6 +8,13 @@ $bodyFont: 'Work Sans', sans-serif;
     box-shadow: $n $n 0px #000000;
 }
 
+@mixin Highlight {
+    background: linear-gradient(120deg, #FFFF00 0%, #FFFF00 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 40%;
+    background-position: 0 90%;
+}
+
 @mixin Montserrat($weight) {
     font-family: 'Montserrat', sans-serif;
     font-weight: $weight;

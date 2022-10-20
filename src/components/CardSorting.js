@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import GridViewIcon from '@mui/icons-material/GridView';
 import FavoriteOutlinedIcon from '@mui/icons-material/FavoriteOutlined';
 import Masonry from 'react-masonry-css';
