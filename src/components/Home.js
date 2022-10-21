@@ -11,14 +11,6 @@ const Home = () => {
         setSearchText(e.target.value)
     }
 
-    const searchData = data.filter((item) => {
-        if(searchText === ""){
-            return item;
-        } else if(item.plainText.toLowerCase().includes(searchText.toLowerCase())){
-            return item;
-        }
-    })
-
     const handleSubmit = (e) => {
         e.preventDefault()
     }
@@ -36,7 +28,7 @@ const Home = () => {
                 onChange={handleChange} />
                 <button><SearchIcon /></button>
             </form>
-            <CardSorting data={data} filteredSearch={searchData} />
+            <CardSorting data={data} searchText={searchText} />
         </section>
     )
 }

@@ -4,7 +4,7 @@ import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlin
 import FavoriteOutlinedIcon from '@mui/icons-material/FavoriteOutlined';
 
 
-const Cards = ({isFavorite, text, onFavorite}) => {
+const Cards = ({isFavorite, text, onFavorite, unFavorite}) => {
     /* When copy button is clicked */
     const [isCopied, setIsCopied] = useState(false)
     const copyToClipboard = (e) => {
@@ -19,7 +19,7 @@ const Cards = ({isFavorite, text, onFavorite}) => {
         <div className="card">
             <div className="card-top">
                 <FormatQuoteIcon />
-                { isFavorite ? <FavoriteOutlinedIcon onClick={onFavorite} /> : <FavoriteBorderOutlinedIcon onClick={onFavorite} /> }
+                { isFavorite ? <FavoriteOutlinedIcon onClick={unFavorite} /> : <FavoriteBorderOutlinedIcon onClick={onFavorite} /> }
                 
             </div>
             {/* <textarea className="card-text" readOnly="readonly" value={text} >

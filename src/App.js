@@ -29,10 +29,10 @@ const App = () => {
   return (
     <main className="App">
       <Navbar formDisplay={displayRequestForm} />
-      {/* {form ? <RequestForm closeForm={closeForm} /> : null}
+      {form ? <RequestForm closeForm={closeForm} /> : null}
       <Home />
-     {isScrolling && <ScrollToTop />} */}
-     <About />
+     {isScrolling && <ScrollToTop />}
+     {/* <About /> */}
     </main>
   );
 }
