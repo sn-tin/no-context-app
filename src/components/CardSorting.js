@@ -22,47 +22,23 @@ const CardSorting = ({data, searchText}) => {
 
     /* When favorite (heart icon) is clicked */
     const [dataSource, setDataSource] = useState(JSON.parse(localStorage.getItem('allItems')) || data);
-    const [favorite, setFavorite] = useState(JSON.parse(localStorage.getItem("favorites")) || []);
 
     /* Save to local storage */ 
     useEffect(() => {
         localStorage.setItem("allItems", JSON.stringify(dataSource))
     })
-    useEffect(() => {
-        localStorage.setItem("favorites", JSON.stringify(favorite));
-    }, [favorite]);
 
-    /* If favorite, change isFavorite to true and push cards to favorite state */ 
+    /* If favorite and unfavorite, change isFavorite to true or false */ 
     const onFavorite = (cardId) => {
         const newDataSource = [...dataSource];
         const foundCardData = newDataSource.find(card => card.id === cardId);
         if(!foundCardData) {
             return;
         }
-        if(foundCardData) {
-         setFavorite(prevState => {
-            return [
-                ...prevState,
-                foundCardData
-            ]
-         })
-        }
         foundCardData.isFavorite = true;
         setDataSource(newDataSource);
     }
-    /* When unfavorite, change isFavorite to false and remove card from favorite state */ 
-    const unFavorite = (cardId) => {
-        const newDataSource = [...dataSource];
-        const foundCardData = newDataSource.find(card => card.id === cardId);
-        if(!foundCardData) {
-            return;
-        }
-        foundCardData.isFavorite = false;
-        setDataSource(newDataSource)
-        setFavorite(card => card.filter((item) => item.id !== cardId))
-    }
     /* When user searches on all or favorite category */ 
-    
     // Filter when user input on the searchbar matches the texts on cards
     const filteredSearch = (source) => {
         return (
@@ -76,7 +52,7 @@ const CardSorting = ({data, searchText}) => {
         )
     }
     const searchAll = filteredSearch(dataSource); 
-    const searchFavorite = filteredSearch(favorite);
+    const searchFavorite = filteredSearch(dataSource);
     const showAllCards = (
             searchAll.map(item => (
                 <Cards key={item.id} 
@@ -84,7 +60,6 @@ const CardSorting = ({data, searchText}) => {
                 text={item.origText} 
                 isFavorite={item.isFavorite} 
                 onFavorite={() => onFavorite(item.id) }
-                unFavorite={() => unFavorite(item.id)}
                 />
             ))
     )
@@ -95,7 +70,6 @@ const CardSorting = ({data, searchText}) => {
             text={filtered.origText} 
             isFavorite={filtered.isFavorite} 
             onFavorite={() => onFavorite(filtered.id) }
-            unFavorite={() => unFavorite(filtered.id)}
             />
         )) 
     )
@@ -110,7 +84,7 @@ const CardSorting = ({data, searchText}) => {
 
     return (
         <section className="cards">
-            <div className="buttons-paginatiom">
+            <div className="category-buttons">
                 <div className="button-group">
                     <button 
                         id="all-btn" 
@@ -129,8 +103,6 @@ const CardSorting = ({data, searchText}) => {
                         <FavoriteOutlinedIcon fontSize="small" />
                     </button>
                 </div>
-                <div className="pagination">
-                </div>
             </div>
             <div className="card-masonry">
                 <Masonry breakpointCols={breakpoints}
@@ -145,4 +117,4 @@ const CardSorting = ({data, searchText}) => {
     )
 }
 
-export default CardSorting
+export default CardSorting;

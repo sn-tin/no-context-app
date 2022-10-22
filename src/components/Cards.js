@@ -19,7 +19,7 @@ const Cards = ({isFavorite, text, onFavorite, unFavorite}) => {
         <div className="card">
             <div className="card-top">
                 <FormatQuoteIcon />
-                { isFavorite ? <FavoriteOutlinedIcon onClick={unFavorite} /> : <FavoriteBorderOutlinedIcon onClick={onFavorite} /> }
+                { isFavorite ? <FavoriteOutlinedIcon onClick={onFavorite} /> : <FavoriteBorderOutlinedIcon onClick={onFavorite} /> }
                 
             </div>
             {/* <textarea className="card-text" readOnly="readonly" value={text} >
