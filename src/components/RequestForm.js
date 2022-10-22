@@ -12,7 +12,7 @@ const RequestForm = ({closeForm}) => {
                     <form>
                         <label htmlFor="username">Name</label>
                         <input type="text" id="username" name="username"/>
-                        <label htmlFor="comment">Comment</label>
+                        <label htmlFor="comment">Script</label>
                         <textarea id="comment" rows="5"></textarea>
                         <button>Submit</button>
                     </form>
