@@ -460,7 +460,52 @@ const data = [
 		id: 81,
 		origText: "Pasensiya na, tropa, ako'y nalate. Si Jokjok, aking ka-date. Jokjok, ‘wag ka mag-alala. ‘Pag ako kasama mo, safe na safe. Good morning.",
 		isFavorite: false
-	}
+	},
+	{
+		id: 82,
+		origText: "ang hirap talaga maging maganda tsaka maging sobrang hot  kasi nga talagang gusto nila agawin lahat ng nasayo ang yummy pa ng boyfriend ko diba package d lahat na nasakanya so ganon talaga minsan may mang aagaw sa boyfriend mo",
+		isFavorite: false
+	},
+	{
+		id: 83,
+		origText: "Sa classroom may batas😏🤞 bawal⛔lumabas🚪oh bawal⛔lumabas🚪 pero😶 kung sinabi😏 na bawal⛔lumabas🚪 at nag-comply ka👈😤😎 ayy👁️👄👁️ pwede✅ na Pala ikaw👇 lumabas🚪",
+		isFavorite: false
+	},
+	{
+		id: 84,
+		origText: "Alam mo naman na crush kita👉👈🥺☺️😳 cute😫mo pag nagagalit😤ka👇lika nga i-huhug kita🫂🤗wag ka nang magtatampo🤞☹️😘",
+		isFavorite: false
+	},
+	{
+		id: 85,
+		origText: "Kala mo😤 hinde🙅🏻‍♀️masakit💔 yung😝 pinag sasabi mo😫 sakin?😳Na patay gutom ak0hh? Bakit?🤨Hindi bayun masakit😔E ikaw nga🙄 hinuhuli😟mo😤yung kalapati E, sabi nya tara joela kung huliin natin yung kalapati🤭🤫kuhanin natin masama yon oh🤨 sya yon sya😤😤 pag sabihan m0 sya🤬 🤬 pa na ninis hati na nga kami sa pag kain😤😤hindi naman sya ang bumili😔💔, hinde nya na lang hingiin🙄😔0 wag mona anohin wag mona sya anohin🤬😤 B4KIT nakikisali ka dito🧐 🤨🤨kahit hindi ka naman kasal😩😌 o bakit?Mo inaano pinsan k0🤔🤔iiyak na nga diba😒🙄 tapos un na nga wag mona anohin iiyak na nga diba😠😤 tapos yun na nga wag mona anuhin😒iiyak na nga eeyeyey🤪0h bakit🤨 oh bakit den😒😒 umalis kna aalis ako di naman ako dito e😠🙄bobo ka pala🤬😤 E bakit ka nag sasabi ng bobo bakit ka na namamangga??😠🤬🤬 Oy dondundunggn.",
+		isFavorite: false
+	},
+	{
+		id: 86,
+		origText: "araw🌞 at🤣 gabi🌚🌚 hawak🤝🤝hawak🤫🤫ka sa😅😅magdamag sa dami👯🧑‍🤝‍🧑👭dami ng😆😆😆pag pipilian👍🌈💔❌ ikaw👉👈 lng ang naibigan💗🥰🥰💗🥰😘 ko na mahalin😝😇😇😝😇",
+		isFavorite: false
+	},
+	{
+		id: 87,
+		origText: "alam😏mo naman🏃‍♀na👿love🙊kita😵cute😁😁mo👾pag😍nagagalit💀ka👹lika👦nga🤥ihuhug kta👯‍♂wg😅k👨‍🔧na💏mag😍💗tatampo🥺🥰 Anong pagkain ang di natutuwa pag may nag joke?🤪🤪😆😆🤣🤣 Ano?🤔🤔😏🤩 Edi Nuggets 🤣🤣🤣🤪🤪🥰🥰😍😍 Kasi di nya nug gets 🤣🤣🤣🤣🤣✌️✌️✌️🙏🙏🤘👌",
+		isFavorite: false
+	},
+	{
+		id: 88,
+		origText: "tamang paggamit ng “ng” at “nang” ng — ay ginagamit kapag sinasagot nito ang salitang “kailan” nang — mainlab ako sa ‘yo akala ko’y pag-ibig mo ay tunay pero hindi nagtagal lumabas din ang tunay na kulay",
+		isFavorite: false
+	},
+	{
+		id: 89,
+		origText: "Alam mo naman na crush kita👉👈🥺☺️😳 cute😫mo pag nagagalit😤ka👇lika nga i-huhug kita🫂🤗wag ka nang magtatampo🤞☹️😘",
+		isFavorite: false
+	},
+	{
+		id: 90,
+		origText: ". byE. . tnx sa Lht. . ingAt ka lage :(( kunG maii prob kA. . lapit ka Lng sakiN. . huh ????. . . byE. . . ayw na kitanG makitA. . makauxap maka cHat. . . . .tama na unG nakita na kitA. . na naging mag kaibigan tau ... tnx for everythinGx. . malayA k nA. . :((",
+		isFavorite: false
+	},
 ]
 
 export default data;
