@@ -35,7 +35,7 @@ const CardSorting = ({data, searchText}) => {
         if(!foundCardData) {
             return;
         }
-        foundCardData.isFavorite = true;
+        foundCardData.isFavorite = !foundCardData.isFavorite;
         setDataSource(newDataSource);
     }
     /* When user searches on all or favorite category */ 

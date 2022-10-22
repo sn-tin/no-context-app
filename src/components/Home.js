@@ -17,8 +17,8 @@ const Home = () => {
 
     return (
         <section className="hero">
-            <h1>Title here</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit <span className="highlight">consectetur</span> sed do eiusmod tempor incididunt</p>
+            <h1>NO CONTEXT</h1>
+            <p>a collection of no context <span className="highlight">unhinged</span> FIlipino texts.</p>
             <form onSubmit={handleSubmit}>
                 <input type="text" 
                 placeholder="Search for text here..." 

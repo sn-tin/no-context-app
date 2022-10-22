@@ -49,6 +49,7 @@
     border: 2px solid #000000;
     padding: 30px;
     margin-bottom: 25px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     &:hover {
         @include blackShadow(5px);
     }

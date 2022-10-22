@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import FormatQuoteIcon from '@mui/icons-material/FormatQuote';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import FavoriteOutlinedIcon from '@mui/icons-material/FavoriteOutlined';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 
 const Cards = ({isFavorite, text, onFavorite, unFavorite}) => {
@@ -22,12 +23,13 @@ const Cards = ({isFavorite, text, onFavorite, unFavorite}) => {
                 { isFavorite ? <FavoriteOutlinedIcon onClick={onFavorite} /> : <FavoriteBorderOutlinedIcon onClick={onFavorite} /> }
                 
             </div>
-            {/* <textarea className="card-text" readOnly="readonly" value={text} >
-            </textarea> */}
             <p>{text}</p>
-            <button className="copy-btn" style={styles} onClick={copyToClipboard}>
+            <CopyToClipboard text={text}>
+                <button className="copy-btn" style={styles} onClick={copyToClipboard}>
                 {isCopied ? "Copied!" : "Copy"}
-            </button>
+                </button>
+            </CopyToClipboard>
+            
         </div>
     )
 }
