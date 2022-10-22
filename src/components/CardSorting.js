@@ -45,7 +45,7 @@ const CardSorting = ({data, searchText}) => {
             source.filter((item) => {
                 if(searchText === ""){
                     return item;
-                } else if(item.plainText.toLowerCase().includes(searchText.toLowerCase())){
+                } else if(item.origText.toLowerCase().includes(searchText.toLowerCase())){
                     return item;
                 }
             })
