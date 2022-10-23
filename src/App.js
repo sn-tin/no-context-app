@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import { useState, useEffect } from 'react';
 import RequestForm from './components/RequestForm';
 import About from './components/About';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 const App = () => {
   const [isScrolling, setIsScrolling] = useState(false);
@@ -27,13 +28,19 @@ const App = () => {
   }
 
   return (
-    <main className="App">
-      <Navbar formDisplay={displayRequestForm} />
-      {form ? <RequestForm closeForm={closeForm} /> : null}
-      <Home />
-     {isScrolling && <ScrollToTop />}
-     {/* <About /> */}
-    </main>
+    <BrowserRouter>
+      <main className="App">
+        <Navbar formDisplay={displayRequestForm} />
+        {form ? <RequestForm closeForm={closeForm} /> : null}
+        <div className="content"> 
+          <Routes>
+            <Route exact path='/' element={<Home />} />
+            <Route path='/about' element={<About />} />
+          </Routes>
+        </div>
+      {isScrolling && <ScrollToTop />}
+      </main>
+    </BrowserRouter>
   );
 }
 

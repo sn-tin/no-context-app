@@ -8,8 +8,12 @@
     font-size: clamp(0.9rem, 2.5vw, 1.1rem);
     @include WorkSans(600);
     cursor: pointer;
-    p:hover {
-        color: #5e5e5e;
+    a {
+        color: #000000;
+        text-decoration: none;
+        &:hover {
+            color: #5e5e5e;
+        }
     }
 }
 
