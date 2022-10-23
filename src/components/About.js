@@ -3,30 +3,21 @@ import React from "react";
 const About = () => {
     return (
         <section className="about">
-            <h1>Unleash your unhingedness and have fun with these texts!</h1>
-            <div className="flex-about">
-                <div className="about-context">
-                    <div className="sender">
-                        <p>I love you</p>
-                        <p>hi gusto kita matagal na. i really like your personality and your mindset. 
-                        ipasa mo to sa 15 katao kung hindi magiging sasakyan ka. wag kang tumawa, yung kaibigan ko tricycle na
-                        </p>
-                    </div>
-                    <div className="receiver">
-                        <p>...</p>
-                    </div>
-                </div>
-                <p className="about-description">
-                    No context app is a collection of no context texts or scripts, hence the name no context. 
-                    These texts are mostly popular Filipino memes known by Gen Zs. Before, these memes are only posted in a form of pictures or videos. 
-                    However, curated over time combined with the unhinged Gen Zs, these memes are now also posted in a form of text. 
-                    These texts are also popularly used by K-pop fans when trending a hashtag or replying to their idols’ posts. 
-                    Some more scenarios where these texts are used: trolling in the comments of a friend’s newly changed display picture, 
-                    replying to unnecessary rude or disrespectful posts, and many more.
+            <h1>Unleash your <span className="highlight">unhingedness</span> and have fun with these texts!</h1>
+            <div className="about-description">
+                <p>
+                    Whether it's on your friend's inbox or newly updated display picture's comment section, 
+                    or your favorite artists' newly uploaded posts on social media, 
+                    or trying to "lowkey" hit on your crush through direct message, 
+                    <strong> No Context</strong> website has your back to freely use and send these texts to 
+                    anyone in any situation.
+                </p>
+                <br />
+                <p>
+                    No Context is a website consisting of memes or jejemon texts (as Filipino Gen-Zs would describe it) 
+                    that makes it easier for the user to search for, copy-paste, and bookmark (or mark as a favorite) those texts.
                 </p>
             </div>
-            <h2>Special thanks to</h2>
-            <p>Carats (SEVENTEEN’s fandom) who has helped me gather these texts. We’re in this rose-quartz and serenity sh*t for life!</p>
         </section>
     )
 }
