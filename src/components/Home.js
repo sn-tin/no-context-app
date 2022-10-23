@@ -26,7 +26,7 @@ const Home = () => {
                 autoComplete="off" 
                 value={searchText}
                 onChange={handleChange} />
-                <button><SearchIcon /></button>
+                <button style={{ color: 'black' }}><SearchIcon /></button>
             </form>
             <CardSorting data={data} searchText={searchText} />
         </section>
