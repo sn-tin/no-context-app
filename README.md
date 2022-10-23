@@ -1,5 +1,5 @@
-# 👩‍💻 Work In Progress: No Context App (temporary title)
-A website where you can copy &amp; paste no context texts to spam your friends' messages or comments section and just have fun together.
+# No Context App
+No Context consists of memes or jejemon texts (as Filipino Gen-Zs would describe it) that makes it easier for the user to search for, copy-paste and bookmark (or mark as a favorite) those texts. 
 
 ## 📖 Table of contents 
 
@@ -17,21 +17,18 @@ A website where you can copy &amp; paste no context texts to spam your friends' 
 
 Users should be able to:
 - View the optimal layout for the site depending on their device's screen size
-- Request for their favorite texts to be added on the website by submitting a form
 - Search for their favorite text
-- Mark cards as their favorite and be able to check it by clicking the 'Favorite' button
-- View all cards by selecting a page
+- Mark cards as their favorite by clicking the heart icon and be able to find it under 'Favorites' by clicking the 'Favorites' button
+- View all cards by selecting the 'All' button
 - Automatically scroll to top by clicking the designated 'scroll to top' button
 
 ### Screenshot 📸
-
-Expected final output:
 
 ![No Context App](src/assets/no-context.png)
 
 ### Links 🔗
 
-- Solution URL: TBA
+- Solution URL: https://github.com/sn-tin/no-context-app
 - Live Site URL: TBA
 
 ### Built with 🔨
@@ -40,13 +37,13 @@ Expected final output:
 - Sass (CSS pre-processor)
 - Flexbox
 - Mobile-first workflow
-- ReactJS
+- ReactJS (React Hooks, Route)
 - MaterialUI
 - [npmjs](https://www.npmjs.com/)
 - [Goole Fonts](https://fonts.google.com/knowledge)
 
 ### Running the App Locally 💻
-This app runs on Node.js. If Node.js is installed, you may clone the repository and install its dependencies running:
+This app runs on Node.js. If Node.js is installed, you may clone the repository and install its dependencies:
 ```
 npm install
 ```
