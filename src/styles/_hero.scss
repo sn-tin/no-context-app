@@ -3,6 +3,7 @@
     margin-top: 50px;
     h1 {
         font-size: clamp(3rem, 5vw, 5.6rem);
+        margin: 0 auto;
         @include Montserrat(800);
     }
     p {

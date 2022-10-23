@@ -17,8 +17,8 @@ const Home = () => {
 
     return (
         <section className="hero">
-            <h1>no context</h1>
-            <p>a collection of unhinged <span className="highlight">Gen Z</span> memes in a form of text.</p>
+            <h1><span className="highlight">no</span><span className="highlight"> context</span></h1>
+            <p>a collection of unhinged Gen Z memes in a form of text.</p>
             <form onSubmit={handleSubmit}>
                 <input type="text" 
                 placeholder="Search for text here..." 
