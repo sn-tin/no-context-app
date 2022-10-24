@@ -9,8 +9,8 @@ const About = () => {
                     Whether it's on your friend's inbox or newly updated display picture's comment section, 
                     or your favorite artists' newly uploaded posts on social media, 
                     or trying to "lowkey" hit on your crush through direct message, 
-                    <strong> No Context</strong> website has your back to freely use and send these texts to 
-                    anyone in any situation.
+                    <strong> No Context</strong> website got your back. You can freely use and send these texts to 
+                    anyone in any situation! 
                 </p>
                 <br />
                 <p>

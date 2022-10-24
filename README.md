@@ -1,5 +1,6 @@
 # No Context App
 No Context consists of memes or jejemon texts (as Filipino Gen-Zs would describe it) that makes it easier for the user to search for, copy-paste and bookmark (or mark as a favorite) those texts. 
+⚠️ Some texts may contain curse words ⚠️
 
 ## 📖 Table of contents 
 
@@ -24,7 +25,7 @@ Users should be able to:
 
 ### Screenshot 📸
 
-![No Context App](src/assets/no-context.png)
+![No Context App](src/assets/no-context-screenshot.png)
 
 ### Links 🔗
 
