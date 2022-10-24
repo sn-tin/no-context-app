@@ -7,9 +7,11 @@
         @include Montserrat(800);
     }
     p {
-        font-size: clamp(1rem, 2.5vw, 1.6rem);
+        width: 85%;
+        max-width: 40rem;
+        margin: 25px auto;
+        font-size: clamp(1rem, 2.5vw, 1.4rem);
         @include WorkSans(400);
-        margin: 20px 0;
     }
     form {
         display: flex;
@@ -60,7 +62,7 @@
 @media screen and (min-width: 800px) {
     .hero {
         p {
-            margin: 20px 0;
+            margin: 20px auto;
         }
         form {
             border-radius: 10px;
