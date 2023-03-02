@@ -31,7 +31,7 @@ const App = () => {
     <BrowserRouter>
       <main className="App">
         <Navbar formDisplay={displayRequestForm} />
-        {form ? <RequestForm closeForm={closeForm} /> : null}
+        {form ? <RequestForm closeForm={closeForm} setForm={setForm} /> : null}
         <div className="content"> 
           <Routes>
             <Route exact path='/' element={<Home />} />
