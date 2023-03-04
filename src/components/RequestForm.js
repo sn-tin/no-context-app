@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import CloseIcon from '@mui/icons-material/Close';
-import data from "../data";
+import { useStateContext } from "../context/StateContextProvider";
 
-const RequestForm = ({closeForm, setForm}) => {
+const RequestForm = () => {
+    const { closeForm, setForm } = useStateContext()
     const initialState = {
         origText: "",
         isFavorite: false,

@@ -1,20 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import SearchIcon from '@mui/icons-material/Search';
-import data from "../data";
 import CardSorting from "./CardSorting";
+import { useStateContext } from "../context/StateContextProvider";
 
 const Home = () => {
-
-    const [searchText, setSearchText] = useState("");
-
-    const handleChange = (e) => {
-        setSearchText(e.target.value)
-    }
-
-    const handleSubmit = (e) => {
-        e.preventDefault()
-    }
-
+    const {searchText, handleChange, handleSubmit} = useStateContext();
     return (
         <section className="hero">
             <h1><span className="highlight">no</span><span className="highlight"> context</span></h1>
@@ -28,7 +18,7 @@ const Home = () => {
                 onChange={handleChange} />
                 <button style={{ color: 'black' }}><SearchIcon /></button>
             </form>
-            <CardSorting data={data} searchText={searchText} />
+            <CardSorting />
         </section>
     )
 }
