@@ -38,7 +38,7 @@ Users should be able to:
 - Sass (CSS pre-processor)
 - Flexbox
 - Mobile-first workflow
-- ReactJS (React Hooks, Route)
+- ReactJS (React Hooks, Router, Context API, Custom Hook)
 - MaterialUI
 - [npmjs](https://www.npmjs.com/)
 - [Goole Fonts](https://fonts.google.com/knowledge)
