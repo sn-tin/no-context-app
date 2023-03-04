@@ -95,7 +95,30 @@
         cursor: pointer;
     }
 }
-
+.edit-form, .edit-form:hover, .edit-form:focus {
+    box-shadow: none !important;
+    textarea {
+        width: 100%;
+        padding: 10px;
+        &:focus {
+            outline: none;
+        }
+    }
+}
+.edit-buttons {
+    display: inline-flex;
+    gap: 10px;
+    margin-top: 20px;
+    button {
+        @include Montserrat(700);
+        border: 2px solid #000000;
+        padding: 10px 20px;
+        border-radius: 5px;
+        &:nth-child(1) {
+            background-color: #FFFF00;
+        }
+    }
+}
 .card-text {
     resize: none;
 }

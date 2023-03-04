@@ -106,6 +106,8 @@ export default function StateContextProvider({children}) {
         isFaveActive,
         handleAllButton,
         handleFaveButton,
+        dataSource,
+        setDataSource,
         onFavorite,
         showAllCards,
         showFavorites,
