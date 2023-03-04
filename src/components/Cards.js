@@ -5,10 +5,13 @@ import FavoriteOutlinedIcon from '@mui/icons-material/FavoriteOutlined';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { DeleteOutline, ModeEdit, MoreVert } from "@mui/icons-material";
 // import data from '../data';
-import { useStateContext } from "../context/StateContextProvider";
 
 const Cards = ({isFavorite, text, onFavorite, cardId}) => {
-    const {isCopied, copyToClipboard} = useStateContext()
+    /* When copy button is clicked */
+    const [isCopied, setIsCopied] = useState(false)
+    const copyToClipboard = (e) => {
+        setIsCopied(true)
+    }
     const styles = {
         backgroundColor: isCopied ? "#FFFF00" : "#FFFFFF",
         transition: "background-color 0.1s ease-in"

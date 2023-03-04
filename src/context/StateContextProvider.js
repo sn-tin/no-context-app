@@ -92,12 +92,7 @@ export default function StateContextProvider({children}) {
             onFavorite={() => onFavorite(filtered.id) }
             />
         )) 
-    )
-    /* When copy button is clicked */
-    const [isCopied, setIsCopied] = useState(false)
-    const copyToClipboard = (e) => {
-        setIsCopied(true)
-    }
+  )
   return (
     <StateContext.Provider value={{
         isScrolling,
@@ -114,8 +109,6 @@ export default function StateContextProvider({children}) {
         onFavorite,
         showAllCards,
         showFavorites,
-        isCopied,
-        copyToClipboard,
     }}>
         {children}
     </StateContext.Provider>
