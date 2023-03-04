@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import FormatQuoteIcon from '@mui/icons-material/FormatQuote';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import FavoriteOutlinedIcon from '@mui/icons-material/FavoriteOutlined';
@@ -30,13 +30,27 @@ const Cards = ({isFavorite, text, onFavorite, cardId}) => {
         setEditing(true)
         setIsOptionsClicked(false)
     }
+    const [currentText, setCurrentText] = useState(text)
+    const editCurrentText = (e) => {
+        setCurrentText(e.target.value)
+    }
+    const updateText = () => {
+        const newDataSource = [...dataSource];
+        const foundData = newDataSource.find((data) => data.id === cardId);
+        if (!foundData) return;
+        foundData.origText = currentText;
+        setDataSource(newDataSource);
+    }
     const submitEdit = (e) => {
         e.preventDefault()
         setEditing(false)
+        updateText()
     }
-    // const deleteData = (item) => {
-    //     const newData = data.filter(i => i.id !== item.id);
-    // }
+    const deleteData = () => {
+        const newDataSource = [...dataSource];
+        const updatedData = newDataSource.filter((data) => data.id !== cardId);
+        setDataSource(updatedData);
+    }
     return (
         <div className="card">
             <div className="card-top">
@@ -51,7 +65,7 @@ const Cards = ({isFavorite, text, onFavorite, cardId}) => {
                     <div className="more-options-wrapper">
                         <div className="more-options">
                             <p id={cardId} ref={ref} onClick={handleEdit}><ModeEdit /> Edit</p>
-                            <p id={cardId}><DeleteOutline /> Delete</p>
+                            <p id={cardId} onClick={deleteData}><DeleteOutline /> Delete</p>
                         </div>
                     </div>
                 )
@@ -60,15 +74,15 @@ const Cards = ({isFavorite, text, onFavorite, cardId}) => {
             {
                 isEditing ? 
                     <form className="edit-form" onSubmit={submitEdit}>
-                        <textarea id={cardId} name="origText" value={text} rows={5}></textarea>
+                        <textarea id={cardId} name="origText" value={currentText} rows={8} onChange={editCurrentText}></textarea>
                     </form>
                 : <p>{text}</p>
             }
             {
                 isEditing ?
                 <div className="edit-buttons">
-                    <button>Edit</button>
-                    <button>Cancel</button>
+                    <button onClick={submitEdit}>Edit</button>
+                    <button onClick={submitEdit}>Cancel</button>
                 </div> : 
                 <CopyToClipboard text={text}>
                     <button className="copy-btn" style={styles} onClick={copyToClipboard}>

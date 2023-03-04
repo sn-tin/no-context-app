@@ -9,7 +9,7 @@ const RequestForm = () => {
         isFavorite: false,
     }
     const [input, setInput] = useState(initialState)
-    const handleSubmit = (e) => {
+    const handleAddFormSubmit = (e) => {
         e.preventDefault()
         setInput(initialState)
         setForm(false)
@@ -31,7 +31,7 @@ const RequestForm = () => {
                     <h1>Hello!</h1>
                     <CloseIcon className="close-btn" onClick={closeForm} />
                     <p>Add your favorite text by filling up this form!</p>
-                    <form onSubmit={handleSubmit}>
+                    <form onSubmit={handleAddFormSubmit}>
                         <label htmlFor="text">Script</label>
                         <textarea 
                             id="text" 
