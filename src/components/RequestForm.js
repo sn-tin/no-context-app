@@ -3,16 +3,18 @@ import CloseIcon from '@mui/icons-material/Close';
 import { useStateContext } from "../context/StateContextProvider";
 
 const RequestForm = () => {
-    const { closeForm, setForm } = useStateContext()
+    const { closeForm, dataSource } = useStateContext()
     const initialState = {
+        id: "",
         origText: "",
         isFavorite: false,
     }
     const [input, setInput] = useState(initialState)
     const handleAddFormSubmit = (e) => {
         e.preventDefault()
+        closeForm()
         setInput(initialState)
-        setForm(false)
+        dataSource.unshift(input)
         console.log(input)
     }
     const handleChange = (e) => {
@@ -20,6 +22,7 @@ const RequestForm = () => {
             const {name, value, type, checked} = e.target
             return {
                 ...prevState,
+                id: dataSource.length + 2,
                 [name]: type === "checkbox" ? checked : value
             }
         })
@@ -47,7 +50,7 @@ const RequestForm = () => {
                             name="isFavorite" 
                             checked={input.isFavorite}
                             onChange={handleChange} 
-                            required />
+                        />
                         <button>Submit</button>
                     </form>
                 </div>
