@@ -10,7 +10,7 @@ const Navbar = () => {
             <div className="nav-links">
                 <Link to="/">Home</Link>
                 <Link to="/about">About</Link>
-                <button className="add-btn" onClick={displayRequestForm}><AddIcon /> Add</button>
+                <button className="add-btn" onClick={displayRequestForm}><AddIcon /> Add New Text</button>
             </div>
         </nav>
     )
