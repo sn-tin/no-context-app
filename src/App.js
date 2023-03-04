@@ -21,8 +21,8 @@ const App = () => {
             </Routes>
           </div>
           {isScrolling && <ScrollToTop />}
-          <Footer />
         </main>
+        <Footer />
       </BrowserRouter>
   );
 }
