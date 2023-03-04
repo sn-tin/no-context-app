@@ -5,7 +5,6 @@ import FavoriteOutlinedIcon from '@mui/icons-material/FavoriteOutlined';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { DeleteOutline, ModeEdit, MoreVert } from "@mui/icons-material";
 import { useStateContext } from "../context/StateContextProvider";
-// import data from '../data';
 
 const Cards = ({isFavorite, text, onFavorite, cardId}) => {
     const { dataSource, setDataSource } = useStateContext();
