@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import FormatQuoteIcon from '@mui/icons-material/FormatQuote';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import FavoriteOutlinedIcon from '@mui/icons-material/FavoriteOutlined';
@@ -8,7 +8,6 @@ import { useStateContext } from "../context/StateContextProvider";
 // import data from '../data';
 
 const Cards = ({isFavorite, text, onFavorite, cardId}) => {
-    const ref = useRef()
     const { dataSource, setDataSource } = useStateContext();
     /* When copy button is clicked */
     const [isCopied, setIsCopied] = useState(false)
@@ -64,7 +63,7 @@ const Cards = ({isFavorite, text, onFavorite, cardId}) => {
                 isOptionsClicked && (
                     <div className="more-options-wrapper">
                         <div className="more-options">
-                            <p id={cardId} ref={ref} onClick={handleEdit}><ModeEdit /> Edit</p>
+                            <p id={cardId} onClick={handleEdit}><ModeEdit /> Edit</p>
                             <p id={cardId} onClick={deleteData}><DeleteOutline /> Delete</p>
                         </div>
                     </div>

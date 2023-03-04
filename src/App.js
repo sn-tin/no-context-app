@@ -5,6 +5,7 @@ import RequestForm from './components/RequestForm';
 import About from './components/About';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useStateContext } from './context/StateContextProvider';
+import Footer from './components/Footer';
 
 const App = () => {
   const { isScrolling, form } = useStateContext()
@@ -20,6 +21,7 @@ const App = () => {
             </Routes>
           </div>
           {isScrolling && <ScrollToTop />}
+          <Footer />
         </main>
       </BrowserRouter>
   );
