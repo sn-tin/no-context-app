@@ -4,7 +4,7 @@ import Masonry from 'react-masonry-css';
 import { useStateContext } from "../context/StateContextProvider";
 
 const CardSorting = () => {
-    const {isAllActive, isFaveActive, handleAllButton, handleFaveButton, showAllCards, showFavorites} = useStateContext()
+    const {dataSource, isAllActive, isFaveActive, handleAllButton, handleFaveButton, showAllCards, showFavorites} = useStateContext()
 
     /* Breakpoints for Masonry Layout */
     const breakpoints = {

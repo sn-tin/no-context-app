@@ -1,4 +1,5 @@
 import React from "react";
+import { Tweet } from "react-twitter-widgets";
 
 const About = () => {
     return (
@@ -17,6 +18,11 @@ const About = () => {
                     No Context is a website consisting of memes or jejemon texts (as Filipino Gen-Zs would describe it) 
                     that makes it easier for the user to search for, copy-paste, and bookmark (or mark as a favorite) those texts.
                 </p>
+            </div>
+            <h2>Texts credits to these thread:</h2>
+            <div className="credits">
+                <Tweet tweetId="1496299200870780928"/>
+                <Tweet tweetId="1478069180305797120" />
             </div>
         </section>
     )
