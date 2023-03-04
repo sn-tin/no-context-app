@@ -19,7 +19,7 @@ const About = () => {
                     that makes it easier for the user to search for, copy-paste, and bookmark (or mark as a favorite) those texts.
                 </p>
             </div>
-            <h2>Texts credits to these thread:</h2>
+            <h2>Texts credit to these thread:</h2>
             <div className="credits">
                 <Tweet tweetId="1496299200870780928"/>
                 <Tweet tweetId="1478069180305797120" />
